@@ -10,9 +10,6 @@
 
 ---
 
-> **Sprint 02 Deliverable** — Logic & Data Phase
-> Vanilla JavaScript · No Frameworks · Pure DOM Manipulation
-
 A functional finance dashboard where users can set their salary, log expenses, view real-time balance updates, and persist state across browser reloads. Built as the Sprint 02 milestone — mastering DOM Manipulation, Event Listeners, and Data Persistence before moving to React abstraction in Sprint 05.
 
 ---
