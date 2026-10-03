@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cash-Flow | Salary &amp; Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="app-header">
+      <h1>💰 Cash-Flow</h1>
+      <p>Salary &amp; Expense Tracker — Sprint 02</p>
+    </header>
+
+    <!-- ===== Currency Bar ===== -->
+    <div class="currency-bar">
+      <span class="currency-label">
+        Currency: <strong id="currentCurrency">INR</strong>
+      </span>
+      <button id="currencyToggle" class="btn btn-ghost" type="button">Switch to USD</button>
+      <span class="rate-info" id="rateInfo"></span>
+    </div>
+
+    <!-- ===== Threshold Alert Banner ===== -->
+    <div id="alertBanner" class="alert-banner hidden"></div>
+
+    <!-- ===== Forms ===== -->
+    <div class="grid">
+
+      <section class="card">
+        <h2>Set Total Salary</h2>
+        <form id="salaryForm" novalidate>
+          <input
+            type="number"
+            id="salaryInput"
+            placeholder="e.g. 50000"
+            step="any"
+          />
+          <button type="submit" class="btn btn-primary">Save Salary</button>
+        </form>
+        <p class="error" id="salaryError"></p>
+      </section>
+
+      <section class="card">
+        <h2>Add Expense</h2>
+        <form id="expenseForm" novalidate>
+          <input
+            type="text"
+            id="expenseName"
+            placeholder="Expense name (e.g. Rent)"
+            maxlength="40"
+          />
+          <input
+            type="number"
+            id="expenseAmount"
+            placeholder="Amount"
+            step="any"
+          />
+          <button type="submit" class="btn btn-primary">Add Expense</button>
+        </form>
+        <p class="error" id="expenseError"></p>
+      </section>
+
+    </div>
+
+    <!-- ===== Summary Stats ===== -->
+    <section class="summary">
+      <div class="stat">
+        <span class="stat-label">Total Salary</span>
+        <span class="stat-value" id="statSalary">₹0.00</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Total Expenses</span>
+        <span class="stat-value" id="statExpenses">₹0.00</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Remaining Balance</span>
+        <span class="stat-value" id="statBalance">₹0.00</span>
+      </div>
+    </section>
+
+    <!-- ===== Expense List + Chart ===== -->
+    <div class="grid">
+
+      <section class="card">
+        <h2>Expense List</h2>
+        <ul id="expenseList" class="expense-list"></ul>
+        <p id="emptyState" class="empty-state">No expenses yet. Add one to get started.</p>
+      </section>
+
+      <section class="card">
+        <h2>Remaining vs Expenses</h2>
+        <div class="chart-wrap">
+          <canvas id="expenseChart"></canvas>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ===== Actions ===== -->
+    <div class="actions">
+      <button id="downloadReport" class="btn btn-secondary" type="button">
+        📄 Download Report (PDF)
+      </button>
+      <button id="resetAll" class="btn btn-danger" type="button">
+        🗑️ Reset All Data
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ===== CDN Libraries ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- ===== App Logic ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
