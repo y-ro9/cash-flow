@@ -148,23 +148,6 @@ The 2-minute demo video must explicitly demonstrate:
 
 ---
 
-## 📚 References
-
-- [MDN — JavaScript DOM Manipulation](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
-- [MDN — LocalStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- [Chart.js Documentation](https://www.chartjs.org/docs/latest/)
-- [jsPDF Documentation](https://github.com/parallax/jsPDF)
-- [Frankfurter API](https://www.frankfurter.app/docs/)
-
----
-
-## 🛣️ Roadmap (Future Sprints)
-
-- **Sprint 05** — Port to React (component abstraction, hooks-based state)
-- **Sprint 06+** — Backend integration (Node/Express), user authentication, cloud sync
-
----
-
 ## 👤 Author
 
 **Yash Raj**
